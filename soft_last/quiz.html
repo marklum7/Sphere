@@ -1,0 +1,111 @@
+<!DOKTYPE html>
+<html>
+
+  <head>
+
+    <title>sphere2</title>
+  
+  </head>
+<body>
+<form>
+ из чего делают свечки?
+ <br>
+  <label> сахар
+  <input type="radio" name="sex" value="0">
+  &nbsp; &nbsp;
+   <label> воск
+  <input type="radio" name="sex" value="1">
+  </label>
+  <br>
+  
+  сколько нужно оставить свечку на остывание?
+  <br>
+  <label> 1 день
+  <input type="radio" name="vtarova" value="0">
+  &nbsp; &nbsp;
+   <label> неделя
+  <input type="radio" name="vtarova" value="1">
+  </label>
+  <br>
+  
+  как долго делать свечку?
+   <br>
+  <label> 1 час
+  <input type="radio" name="i_yedy" value="0">
+  &nbsp; &nbsp;
+   <label> 2 часа
+  <input type="radio" name="i_yedy" value="1">
+  </label>
+  <br>
+  
+  основные элементы свечек:
+  <br>
+  <label> 1) воск фитиль краситель
+  <input type="radio" name="hrr" value="0">
+  &nbsp; &nbsp;
+   <label> воск фитиль форма
+  <input type="radio" name="hrr" value="1">
+  </label>
+  <br>
+   <br>
+   
+ какая самая популярная свечка в нашей компании ?
+  <br>
+  <label> сова
+  <input type="radio" name="pol" value="0">
+  &nbsp; &nbsp;
+   <label> спираль
+  <input type="radio" name="pol" value="1">
+  </label>
+  <br>
+  
+есть ли у компании sphere магниты?
+   <br>
+  <label> да
+  <input type="radio" name="i_yed" value="1">
+  &nbsp; &nbsp;
+   <label> нет
+  <input type="radio" name="i_yed" value="0">
+  </label>
+  <br>
+  
+  могут ли быть свечки без красителей?:
+  <br>
+  <label> 1)да
+  <input type="radio" name="rbf" value="1">
+  &nbsp; &nbsp;
+   <label> нет
+  <input type="radio" name="rbf" value="0">
+  </label>
+  <br>
+  <p> какие свечки продаются в компании софтиум
+  
+   <input type="text" id="svech">
+   </p>
+  
+    <p>
+<input type="button" id="calc" value="Подсчитать результаты">
+<input type="reset" value="Сброс">
+</p>
+  
+  </form>
+
+<script>
+
+
+calc.onclick=function(){
+var myform = this.form;
+var sum=0;
+if(myform.sex.value =='1') sum++;
+if(myform.vtarova.value =='1') sum++;
+if(myform.i_yedy.value =='1') sum++;
+if(myform.pol.value =='1') sum++;
+if(myform.hrr.value =='1') sum++;
+if(myform.i_yed.value =='1') sum++;
+if(myform.rbf.value =='1') sum++
+if(document.getElementById("svech").value=="роза") sum++;
+myform.result.value = sum;
+}
+</script>
+</body>
+Итого верных ответов: <input type="text" name="result" readonly>
